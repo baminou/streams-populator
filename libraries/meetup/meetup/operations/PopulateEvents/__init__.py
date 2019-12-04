@@ -42,4 +42,6 @@ class PopulateEvents(DotEnvOperation):
                 mydb.commit()
             except mysql.connector.errors.IntegrityError:
                 print(event.get_name()+" already populated")
+            except mysql.connector.errors.DatabaseError:
+                print("Database error")
         return
