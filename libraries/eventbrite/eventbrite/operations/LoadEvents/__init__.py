@@ -1,9 +1,9 @@
 
-from uperations.operation import Operation
+from uperation_base.operation_types.dot_env_operation import DotEnvOperation
 import requests
 import json
 
-class Loadevents(Operation):
+class Loadevents(DotEnvOperation):
 
     @staticmethod
     def name():
