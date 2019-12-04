@@ -1,9 +1,9 @@
 
-from uperation_base.operation_types.dot_env_operation import DotEnvOperation
+from uperations.operation import Operation
 import requests
 import json
 
-class Loadevents(DotEnvOperation):
+class Loadevents(Operation):
 
     @staticmethod
     def name():
@@ -21,7 +21,7 @@ class Loadevents(DotEnvOperation):
         search_url = "https://www.eventbriteapi.com/v3/events/search?sort_by=%s&location.address=%s" % ('date', self.args.address)
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '
+            'Authorization': 'Bearer'
         }
         print(requests.get(search_url,headers=headers).content)
         return

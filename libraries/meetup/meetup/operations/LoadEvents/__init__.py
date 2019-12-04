@@ -1,5 +1,4 @@
 
-from uperations.operation import Operation
 from uperation_base.operation_types.dot_env_operation import DotEnvOperation
 import requests
 import json
@@ -7,7 +6,7 @@ import os
 from models.Event import Event
 from datetime import datetime
 
-class Loadevents(Operation):
+class Loadevents(DotEnvOperation):
 
     @staticmethod
     def name():
