@@ -3,3 +3,4 @@ cloudinary==1.18.2
 uperations_kernel==0.0.10
 uperations_base==0.0.20
 mysql_connector_repackaged==0.3.1
+mysql-connector-python==8.0.11

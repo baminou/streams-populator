@@ -57,7 +57,7 @@ class FeedStreams(DotEnvOperation):
                 'lat': data['lat'],
                 'lng': data['lng'],
                 'address': data['address'],
-                'visibility': 'private',
+                'visibility': os.getenv('MEETUP_VISIBILITY'),
                 'start_date': data['start'].strftime('%m-%Y-%d'),
                 'end_date': data['end'].strftime('%m-%Y-%d'),
                 'start_time': data['start'].strftime('%I:%M %p'),
