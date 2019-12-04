@@ -37,9 +37,10 @@ class FeedStreams(DotEnvOperation):
 
         for result in mycursor.fetchall():
             data = dict(zip(field_names,result))
-            if 'picture' in data: continue
-            if data['address']==None or data['lat']==None or data['lng']==None:
-                continue
+            if not 'picture' in data: continue
+            if not 'address' in data: continue
+            if not 'lat' in data: continue
+            if not 'lng' in data: continue
 
             picture_url = cloudinary.uploader.upload(data['picture'],
                 cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
